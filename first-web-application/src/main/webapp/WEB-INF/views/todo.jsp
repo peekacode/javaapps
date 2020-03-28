@@ -1,6 +1,8 @@
 <%@ include file="common/header.jspf"%>
 <%@ include file="common/navigation.jspf"%>
 <div class="container">
+    <p> Welcome ${name} </p>
+    <h6>Today's date: <%= (new java.util.Date()).toLocaleString()%></h6>
 	<form:form method="post" commandName="todo">
 		<form:hidden path="id" />
 		<fieldset class="form-group">

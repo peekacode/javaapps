@@ -41,7 +41,6 @@ public class TodoController {
 		model.addAttribute("name", getLoggedInUserName());
 		String user = (String) model.get("name");
 		model.addAttribute("todos", service.retrieveTodos(user));
-		System.out.println(model);
 		return "list-todo";
 	}
 
@@ -86,7 +85,7 @@ public class TodoController {
 
 		todo.setUser(getLoggedInUserName());
 		service.updateTodo(todo);
-
+		
 		model.clear();// to prevent request parameter "name" to be passed
 		return "redirect:/list-todo";
 	}

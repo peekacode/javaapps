@@ -12,7 +12,7 @@
 			<tr>
 				<th>Description</th>
 				<th>Date</th>
-				<th>Completed</th>
+				<th>User</th>
 				<th></th>
 			</tr>
 		</thead>

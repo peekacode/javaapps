@@ -11,7 +11,10 @@
         </servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/todo-servlet.xml</param-value>
+            <param-value>
+            	/WEB-INF/mvc-dispatcher-servlet.xml
+            	/WEB-INF/data-source-cfg.xml
+            </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -19,6 +22,7 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
+        <url-pattern>/*contact*</url-pattern>
     </servlet-mapping>
     
     <filter>

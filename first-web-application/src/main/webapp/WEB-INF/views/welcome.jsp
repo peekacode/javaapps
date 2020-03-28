@@ -24,6 +24,11 @@
 					<td><%= (new java.util.Date()).toLocaleString()%></td>
 					<td>${name}</td>
 				</tr>
+				<tr>
+					<td><p><a href= "/contact-manager">Contact Manager</a></p></td>
+					<td><%= (new java.util.Date()).toLocaleString()%></td>
+					<td>${name}</td>
+				</tr>
 			</tbody>
 		</table>
 	</div>
