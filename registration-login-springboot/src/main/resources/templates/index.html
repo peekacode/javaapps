@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<div th:replace="common :: myheader"></div>
+</head>
+<body>
+	<div th:replace="common :: mynav"></div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="welcome">
+			<h2>User Registration and Login Module using Spring Boot, Spring
+				MVC, Spring Security, JPA/Hibernate and Thymeleaf</h2>
+
+			<p>
+				Welcome <span sec:authentication="principal.username">User</span>
+			</p>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="card border-secondary mb-3">
+					<div class="card-body">
+						<h5 class="card-header">My Next App</h5>
+						<p class="card-text">With supporting text below as a natural
+							lead-in to additional content.</p>
+						<a href="/billing" class="btn btn-primary">Billing App</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="card border-secondary mb-3">
+					<div class="card-body">
+						<h5 class="card-header">My Next App</h5>
+						<p class="card-text">With supporting text below as a natural
+							lead-in to additional content.</p>
+						<a href="#" class="btn btn-primary">Billing App</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div th:insert="common :: myfooter"></div>
+
+</body>
+</html>

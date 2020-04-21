@@ -1,0 +1,60 @@
+<html>
+<body>
+
+	<div id="footer" th:fragment="myfooter">
+
+		<footer class="page-footer bg-light font-small fixed-bottom">
+			<!-- Copyright -->
+			<div class="footer-copyright text-center py-3">
+				© 2020 Copyright: <a href="https://peekatech.com/">
+					Peek-A-Tech</a>
+			</div>
+			<!-- Optional JavaScript -->
+			<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+			<script type="text/javascript"
+				th:src="@{/webjars/jquery/3.4.0/jquery.min.js/}"></script>
+			<script type="text/javascript"
+				th:src="@{/webjars/popper.js/1.15.0/popper.min.js}"></script>
+			<script type="text/javascript"
+				th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+		</footer>
+	</div>
+
+	<div th:fragment="myheader">
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" type="text/css"
+			th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+
+		<title>Registration</title>
+
+	</div>
+
+	<div th:fragment="mynav">
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid">
+				<div class="navbar-header">
+
+					<a class="navbar-brand" href="#" th:href="@{/}">Registration
+						and Login Module</a>
+				</div>
+
+				<form class="form-inline">
+					<input class="form-control mr-sm-2" type="search"
+						placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+				</form>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li sec:authorize="isAuthenticated()"><a th:href="@{/logout}">Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+
+	</div>
+
+</body>
+</html>
